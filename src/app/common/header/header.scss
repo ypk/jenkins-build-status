@@ -1,0 +1,18 @@
+@import "../common";
+
+.navbar {
+  background-color: $primary;
+  border-color: $primary;
+
+  .navbar-brand{
+    color: $white;
+    text-shadow: 1px 1px 1px $black;
+    background-image: url('../../../assets/images/stw.png');
+    height: 100%;
+    width: auto;
+    background-size: 80px;
+    background-repeat: no-repeat;
+    text-indent: 90px;
+    background-position: 10px;
+  }
+}

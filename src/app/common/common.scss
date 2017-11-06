@@ -1,0 +1,53 @@
+// variables
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/variables";
+
+// colors
+$white:                    #ffffff;
+$black:                    #000000;
+$primary:                  #0b56a4;
+$primary-accent:           #18ab4f;
+$dark-gray:                #333333;
+$light-gray:               #eeeeee;
+
+body{
+  font-family: 'Open Sans', sans-serif;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.submit{
+  background: $primary-accent;
+  border-radius: 0;
+  margin-top: 10px;
+  padding: 10px 30px;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: $white;
+  transition: all 0.3s ease;
+
+  &:focus,
+  &:hover {
+      background: $primary;
+  }
+}
+
+.input{
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: transparent;
+  border: 1px solid $gray;
+  border-radius: 0;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  color: $primary;
+  display: block;
+  font-size: 15px;
+  height: 40px;
+  line-height: 1.42857;
+  padding: 6px 12px;
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+  width: 100%;
+}

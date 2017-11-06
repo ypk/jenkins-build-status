@@ -1,0 +1,84 @@
+@import "../../common/common";
+@import "../../common/mixins";
+@import "../../../../node_modules/ui-select/dist/select.css";
+@import "../../../../node_modules/selectize/dist/css/selectize.default.css";
+
+main#site-content {
+  margin-top: 96px;
+  min-height: 480px;
+
+  .selectize-dropdown {
+    margin: -5px 0 0;
+  }
+
+  .stats-container {
+    margin: 36px auto;
+
+    ul {
+      &.build-stats {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+
+        li {
+          padding: 16px;
+          display: flex;
+          flex-direction: column;
+          border-bottom: 1px solid $light-gray;
+          @include tablet {
+            flex-direction: row;
+          }
+
+          p {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+
+            &.prop-title {
+              font-weight: bold;
+            }
+            @include tablet {
+              &:first-child {
+                width: 35%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .panel {
+    .panel-body{
+      .panel-content{
+      display: flex;
+      @include tablet {
+        margin-bottom: 20px;
+      }
+      .panel-icon {
+        color: #f2dede;
+        width: 70px;
+        font-size: 50px;
+        padding: 0 10px 0 0;
+        @include tablet {
+          width:auto;
+          font-size: 30px;
+        }
+      }
+      .panel-title {
+        h3 {
+          margin-top: 0;
+          @include tablet {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+      p{
+        @include tablet {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

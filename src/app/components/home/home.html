@@ -1,0 +1,88 @@
+<site-header />
+<main id="site-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-6">
+        <div class="form-group">
+          <ui-select on-select="$ctrl.processSelection($item, $model)" input-id="environments" ng-model="$ctrl.environments.selected" theme="selectize" search-enabled="false">
+            <ui-select-match placeholder="Select an Environment">
+              <span ng-bind="$select.selected.name"></span>&nbsp;(<span ng-bind="$select.selected.title"></span>)
+            </ui-select-match>
+            <ui-select-choices repeat="item in $ctrl.environments | filter: $select.search">
+              <div ng-bind-html="item.name | highlight: $select.search"></div>
+              <small ng-bind-html="item.title | highlight: $select.search"></small>
+            </ui-select-choices>
+          </ui-select>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-6">
+        <div class="form-group">
+          <ui-select on-select="$ctrl.processSelection($item, $model)" input-id="applications" ng-model="$ctrl.applications.selected" theme="selectize" search-enabled="false">
+            <ui-select-match placeholder="Select an Application">
+              <span ng-bind="$select.selected.name"></span>
+            </ui-select-match>
+            <ui-select-choices repeat="item in $ctrl.applications | filter: $select.search">
+              <div ng-bind-html="item.name | highlight: $select.search"></div>
+              <small ng-bind-html="item.path | highlight: $select.search"></small>
+            </ui-select-choices>
+          </ui-select>
+        </div>
+      </div>
+    </div>
+    <div class="row" ng-if="$ctrl.toggleStats === true">
+      <div class="col-xs-12">
+        <div class="stats-container">
+          <ul class="build-stats">
+            <li>
+              <p class="prop-title">Application Name</p>
+              <p ng-bind="$ctrl.processData($ctrl.buildStats.appName)"></p>
+            </li>
+            <li>
+              <p class="prop-title">Build URL</p>
+              <span ng-if="$ctrl.buildStats.buildNo !== null)">
+                <a ng-href="{{$ctrl.buildStats.buildNo}}" ng-bind="$ctrl.buildStats.buildNo"></a>
+              </span>
+              <span ng-if="$ctrl.buildStats.buildNo == null)">
+                <p ng-bind="$ctrl.processData($ctrl.buildStats.buildNo)"></p>
+              </span>
+            </li>
+            <li>
+              <p class="prop-title">Current Branch</p>
+              <p ng-bind="$ctrl.processData($ctrl.buildStats.currentBranch)"></p>
+            </li>
+            <li>
+              <p class="prop-title">Environment Name</p>
+              <p ng-bind="$ctrl.processData($ctrl.buildStats.envName)"></p>
+            </li>
+            <li>
+              <p class="prop-title">Last Deployed At</p>
+              <p ng-bind="$ctrl.processData($ctrl.buildStats.lastDeployedAt)"></p>
+            </li>
+            <li>
+              <p class="prop-title">Last Deployed By</p>
+              <p ng-bind="$ctrl.processData($ctrl.buildStats.lastDeployedBy)"></p>
+            </li>
+            <li>
+              <p class="prop-title">Last Deployed Status</p>
+              <p ng-bind="$ctrl.processData($ctrl.buildStats.lastDeployedStatus)"></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-danger" ng-if="$ctrl.toggleError === true">
+        <!-- Default panel contents -->
+        <div class="panel-heading">HTTP Error</div>
+        <div class="panel-body">
+          <div class="panel-content">
+            <div class="panel-icon">⚠️</div>
+            <div class="panel-title"><h3>An unexpected error has occurred while trying to fetch data</h3></div>
+          </div>
+          <p>This is possibly due to server not responding or connectivity issues.</p>
+          <p>Please try again in a few minutes</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<site-footer />

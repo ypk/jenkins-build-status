@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Sandbox",
+    "title": "Sandbox",
+    "path": "Sandbox"
+  },
+  {
+    "name": "Unit Test Server 1",
+    "title": "ST4W3153",
+    "path": "ST4W3153 (UT-1)"
+  },
+  {
+    "name": "Unit Test Server 2",
+    "title": "ST4W3163",
+    "path": "ST4W3163 (UT-2)"
+  },
+  {
+    "name": "Unit Test Server 3",
+    "title": "ST3W3153",
+    "path": "ST3W3153 (UT-3)"
+  },
+  {
+    "name": "Development Server",
+    "title": "Dev Server",
+    "path": "Dev"
+  },
+  {
+    "name": "System Integration & Testing Server",
+    "title": "SIT Server",
+    "path": "SIT"
+  },
+  {
+    "name": "User Acceptance Testing Server",
+    "title": "UAT Server",
+    "path": "UAT"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "name": "OSGi",
+    "path": "osgi"
+  },
+  {
+    "name": "AEM",
+    "path": "aem"
+  },
+  {
+    "name": "AEM Content",
+    "path": "aem-content"
+  }
+]

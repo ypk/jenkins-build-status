@@ -1,0 +1,12 @@
+//fonts
+$icon-font-path: "~bootstrap-sass/assets/fonts/";
+$fa-font-path:   "~font-awesome/fonts/";
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+
+// library
+@import "~bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import "~font-awesome/scss/font-awesome.scss";
+@import "common/common";
+@import "common/mixins";
